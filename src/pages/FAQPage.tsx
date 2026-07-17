@@ -12,11 +12,11 @@ function FAQPage() {
     <main className="faq-page">
       <section className="faq-hero">
         <div className="section-heading">
-          <p className="eyebrow">FAQ</p>
-          <h1>JellyFish FAQ</h1>
+          <h1>JellyFish Dumbbell Weight Add-On FAQ</h1>
           <p className="faq-intro">
-            Product details, fit notes, safety guidance, launch timing, and
-            shipping expectations for Founder Batch 001.
+            Answers about JellyFish, dumbbell add-on weights, fit, safety,
+            installation, Founder Batch 001, and how to add weight to dumbbells
+            while keeping the handle clear.
           </p>
 
           <div className="hero-actions">
@@ -43,26 +43,35 @@ function FAQPage() {
 
       <section className="faq-section" aria-label="Frequently asked questions">
         <div className="faq-layout">
-          {expandableCategories.map((category) => (
-            <section className="faq-category" key={category.title}>
-              <h2>{category.title}</h2>
+          {expandableCategories.map((category) => {
+            const isWarrantyCategory = category.title
+              .toLowerCase()
+              .includes('warranty');
 
-              <div className="faq-list">
-                {category.items.map((item) => (
-                  <details className="faq-item" key={item.question}>
-                    <summary>{item.question}</summary>
-                    <p>{item.answer}</p>
-                  </details>
-                ))}
-              </div>
-            </section>
-          ))}
+            return (
+              <section
+                className={`faq-category ${isWarrantyCategory ? 'faq-category-featured' : 'faq-category-featured'}`}
+                key={category.title}
+              >
+                <h2>{category.title}</h2>
+
+                <div className="faq-list">
+                  {category.items.map((item) => (
+                    <details className="faq-item" key={item.question}>
+                      <summary>{item.question}</summary>
+                      <p>{item.answer}</p>
+                    </details>
+                  ))}
+                </div>
+              </section>
+            );
+          })}
         </div>
       </section>
 
       <section className="faq-cta">
         <p className="eyebrow">Founder Batch 001</p>
-        <h2>Want launch updates before the first run opens?</h2>
+        <h2>Want first access to the JellyFish dumbbell weight add-on?</h2>
         <a className="button" href="/#email">
           Join the List
         </a>

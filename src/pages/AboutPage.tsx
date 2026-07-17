@@ -4,7 +4,7 @@ function AboutPage() {
       <section className="about-hero">
         <div className="about-copy">
           <p className="eyebrow">About Bigger Than Most</p>
-          <h1>Built by lifters. Built for home gyms.</h1>
+          <h1>Built by lifters. Built for dumbbell training.</h1>
 
           <div className="about-story">
             <p>
@@ -14,20 +14,18 @@ function AboutPage() {
             </p>
 
             <p>
-              Years later, we found ourselves running into the same problem a
-              lot of home gym owners face: dumbbells are expensive, space is
-              limited, and every jump in weight feels like another hit to the
-              wallet. We got tired of paying premium prices for basic equipment,
-              especially fixed dumbbells, and decided to build something
-              different.
+              Years later, we ran into the same problem a lot of lifters face:
+              dumbbells are expensive, space is limited, and every jump in
+              weight feels like another hit to the wallet. We wanted a smarter
+              way to add weight to dumbbells without crowding the handle or
+              buying another pair every time training moved up.
             </p>
 
             <p>
-              That idea became JellyFish, a patent-pending dumbbell upgrade
-              system designed to help lifters get more range from the dumbbells
-              they already own. Instead of buying another pair every time you
-              need a weight jump, JellyFish adds usable weight while keeping the
-              handle clear.
+              That idea became JellyFish, a patent-pending dumbbell weight
+              add-on designed to help lifters get more range from the dumbbells
+              they already own. It adds usable weight at the dumbbell head while
+              keeping the grip area clear.
             </p>
           </div>
         </div>
@@ -45,22 +43,21 @@ function AboutPage() {
         <div className="about-story about-story-narrow">
           <p>
             We are not here to make cheap, disposable gear. We are here to build
-            premium solutions that help everyday lifters save money, save space,
-            and keep progressing.
+            premium dumbbell add-on weight solutions that help everyday lifters
+            save space, keep progressing, and get more from the equipment they
+            already own.
           </p>
 
           <p>
-            This is just the beginning. JellyFish is our first step toward
-            solving the dumbbell problem, and Bigger Than Most will keep
-            innovating for lifters who expect more from their equipment.
+            JellyFish is our first step toward solving the dumbbell problem, and
+            Bigger Than Most will keep innovating for lifters who expect more
+            from their equipment.
           </p>
 
-          <p className="about-signoff">
-            Built by lifters. Built for home gyms. Built for YOU to be
-            <h2>
-              BIGGER THAN MOST
-            </h2>
-          </p>
+          <div className="about-signoff">
+            <p>Built by lifters. Built for dumbbell training. Built to be</p>
+            <h2>BIGGER THAN MOST</h2>
+          </div>
 
           <div className="hero-actions">
             <a className="button" href="/#email">

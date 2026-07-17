@@ -79,7 +79,9 @@ leads.csv
 serviceAccountKey.json
 /serviceAccountKey.json
 /dist
-/public
+/public/*
+!/public/robots.txt
+!/public/sitemap.xml
 /scripts
 package-lock.json
 /.agents
