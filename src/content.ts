@@ -98,19 +98,14 @@ export const faqCategories: FAQCategory[] = [
     title: 'Why JellyFish Is Different',
     items: [
       {
-        question: 'How is JellyFish different from handle-mounted dumbbell add-on plates?',
+        question: 'How is JellyFish different from other dumbbell add-ons?',
         answer:
-          'Most handle-mounted add-on plates take up grip space. JellyFish adds weight at the dumbbell head instead, helping preserve the normal handle feel during controlled lifts.',
+          'Most dumbbell weight add-ons take up grip space. JellyFish adds weight at the dumbbell head instead, helping preserve the normal handle feel during controlled lifts.',
       },
       {
         question: 'Does JellyFish affect my grip?',
         answer:
-          'JellyFish is designed to keep the handle area clear. Since the weight mounts away from your hand, your grip position stays more natural than with handle-mounted dumbbell weight add-ons.',
-      },
-      {
-        question: 'Can JellyFish help with dumbbell microloading?',
-        answer:
-          'Yes. JellyFish is designed to help create smaller dumbbell weight jumps. Each sleeve adds 2.5 lb to one dumbbell head, and a pair of sleeves adds 5 lb to one dumbbell.',
+        'No, that\'s the point.'
       },
       {
         question: 'Will JellyFish change how the dumbbell feels?',
@@ -120,37 +115,17 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'Why not just buy the next dumbbell pair?',
         answer:
-          'You can. JellyFish is for lifters who want more weight options from the dumbbells they already own without buying another pair every time they need a 5 lb jump.',
+          'Do you like wasting money and space?',
       },
     ],
   },
   {
-    title: 'Fit and Compatibility',
+    title: 'Size Cart',
     items: [
       {
-        question: 'What dumbbells does JellyFish fit?',
+        question: 'coming soon',
         answer:
-          'JellyFish is designed for compatible fixed dumbbells. Final fit measurements and compatibility guidance will be published before launch.',
-      },
-      {
-        question: 'Does JellyFish fit all dumbbells?',
-        answer:
-          'No. Dumbbell dimensions vary by brand, style, and weight. A final fit guide will be provided before launch so customers can confirm compatibility before ordering.',
-      },
-      {
-        question: 'Will it fit adjustable dumbbells?',
-        answer:
-          'No. JellyFish is not intended for adjustable dumbbells unless a specific model is tested and approved.',
-      },
-      {
-        question: 'Can I use it on damaged dumbbells?',
-        answer:
-          'No. Do not use JellyFish on cracked, torn, loose, heavily worn, or damaged dumbbells.',
-      },
-      {
-        question: 'How do I know if it will fit my dumbbells?',
-        answer:
-          'Before launch, Bigger Than Most will provide a fit guide with the measurements needed to confirm compatibility.',
+          'coming soon',
       },
     ],
   },
@@ -175,17 +150,12 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'Should I inspect JellyFish before use?',
         answer:
-          'Yes. Check for loose Chicago screws, fabric wear, disc movement, tearing, stretching, or any visible damage before every workout.',
+          'Yes. Check for loose screws, fabric wear, disc movement, tearing, stretching, or any visible damage before every workout.',
       },
       {
         question: 'What should I do if a screw loosens?',
         answer:
-          'Stop using the product immediately. Re-tighten according to the instructions and inspect the sleeve and hardware before continuing.',
-      },
-      {
-        question: 'Is JellyFish for commercial gym use?',
-        answer:
-          'The first version should be considered a home-gym product unless commercial use is specifically tested and approved later.',
+          'Stop using the product immediately. Send The Product back, Lifetime Warranty Remember? We are not kidding.',
       },
     ],
   },
@@ -195,12 +165,7 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'How do I install JellyFish?',
         answer:
-          'Install one JellyFish sleeve on each head of the dumbbell. Make sure both sleeves are seated evenly and the fasteners are secure before lifting.',
-      },
-      {
-        question: 'Why does JellyFish use Chicago screws?',
-        answer:
-          'Chicago screws allow the steel discs to fasten through the sleeve mechanically while keeping the dumbbell add-on weight assembly serviceable and clean.',
+          'Install one JellyFish sleeve on each head of the dumbbell. Make sure both sleeves are seated evenly and the Disc is flush against the dumbbell head.',
       },
       {
         question: 'Can I remove JellyFish and use it on another dumbbell?',
@@ -268,30 +233,16 @@ export const faqCategories: FAQCategory[] = [
     title: 'Lifetime Warranty',
     items: [
       {
-        question: 'Does JellyFish have a lifetime warranty?',
+        question: 'What does the lifetime warranty mean?',
         answer:
-          'Yes. JellyFish will include a lifetime warranty. If your JellyFish is damaged in any way during normal ownership, send it back and pay the return shipping. Bigger Than Most will replace it for free.',
+          'A Warranty for a lifetime.',
       },
-      {
-        question: 'What does the lifetime warranty cover?',
-        answer:
-          'The warranty is built to keep customers confident in the product. If the sleeve, steel discs, or fasteners are damaged, contact Bigger Than Most for return instructions. After the product is received, a replacement will be sent at no product cost.',
-      },
-      {
-        question: 'Do I have to pay for the replacement?',
-        answer:
-          'No. The replacement product is free. The customer is only responsible for shipping the damaged JellyFish back to Bigger Than Most.',
-      },
-      {
-        question: 'How do I start a warranty claim?',
-        answer:
-          'Email Bigger Than Most with your order information and photos of the damaged product. We will provide return instructions so you can send the product back for replacement.',
-      },
+      
     ],
   },
   {
-    title: 'Shipping',
-    items: [
+      title: 'Shipping',
+      items: [
       {
         question: 'Where will JellyFish ship?',
         answer: 'The first launch is expected to focus on U.S. customers.',
