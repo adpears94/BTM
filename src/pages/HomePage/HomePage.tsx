@@ -1,7 +1,8 @@
-import DetailsSection from '../components/DetailsSection';
-import EmailSection from '../components/EmailSection';
-import HeroSection from '../components/HeroSection';
-import type { ProductImage } from '../types';
+import DetailsSection from '../../components/DetailsSection';
+import EmailSection from '../../components/EmailSection';
+import HeroSection from '../../components/HeroSection';
+import type { ProductImage } from '../../types';
+import './HomePage.css';
 
 type HomePageProps = {
   onImageSelect: (image: ProductImage) => void;

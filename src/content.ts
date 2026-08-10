@@ -135,7 +135,7 @@ export const faqCategories: FAQCategory[] = [
       {
         question: 'Is JellyFish safe to use?',
         answer:
-          'JellyFish is designed for controlled strength training when installed correctly and used as directed. Users should inspect the sleeve, steel discs, and Chicago screws before each use.',
+          'JellyFish is designed for controlled strength training when installed correctly and used as directed. Users should inspect the sleeve, steel discs, and screws before each use.',
       },
       {
         question: 'Can I drop dumbbells with JellyFish installed?',

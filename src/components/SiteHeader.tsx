@@ -1,5 +1,5 @@
 type SiteHeaderProps = {
-  page: 'home' | 'faq' | 'about';
+  page: 'home' | 'faq' | 'about' | 'terms';
 };
 
 function SiteHeader({ page }: SiteHeaderProps) {

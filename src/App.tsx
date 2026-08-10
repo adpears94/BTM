@@ -2,12 +2,13 @@ import { useCallback, useEffect, useState } from 'react';
 import ImageModal from './components/ImageModal';
 import IntroVideo from './components/IntroVideo';
 import SiteHeader from './components/SiteHeader';
-import AboutPage from './pages/AboutPage';
-import FAQPage from './pages/FAQPage';
-import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage/AboutPage';
+import FAQPage from './pages/FAQPage/FAQPage';
+import HomePage from './pages/HomePage/HomePage';
+import TermsPage from './pages/TermsPage/TermsPage';
 import type { ProductImage } from './types';
 
-type Page = 'home' | 'faq' | 'about';
+type Page = 'home' | 'faq' | 'about' | 'terms';
 
 function getCurrentPage(): Page {
   const normalizedPath = window.location.pathname.replace(/\/$/, '') || '/';
@@ -18,6 +19,10 @@ function getCurrentPage(): Page {
 
   if (normalizedPath === '/about') {
     return 'about';
+  }
+
+  if (normalizedPath === '/terms') {
+    return 'terms';
   }
 
   return 'home';
@@ -49,10 +54,10 @@ function setCanonical(path: string) {
 
 function updateSeo(page: Page) {
   if (page === 'faq') {
-    document.title = 'JellyFish Dumbbell Weight Add-On FAQ | Bigger Than Most';
+    document.title = 'Dumbbell Weight Add-On FAQ | Bigger Than Most';
     setOrCreateMeta(
       'description',
-      'Answers about JellyFish, a patent-pending dumbbell weight add-on that adds weight at the dumbbell head while keeping the handle clear.',
+      'Answers about patent-pending dumbbell weight add-on that adds weight at the dumbbell head while keeping the handle clear.',
     );
     setCanonical('/faq');
     return;
@@ -68,10 +73,20 @@ function updateSeo(page: Page) {
     return;
   }
 
-  document.title = 'Dumbbell Weight Add-On | JellyFish by Bigger Than Most';
+  if (page === 'terms') {
+    document.title = 'Terms of Use | Bigger Than Most';
+    setOrCreateMeta(
+      'description',
+      'Read the terms governing use of the Bigger Than Most website, products, content, and services.',
+    );
+    setCanonical('/terms');
+    return;
+  }
+
+  document.title = 'Dumbbell Weight Add-On | Bigger Than Most';
   setOrCreateMeta(
     'description',
-    'JellyFish is a patent-pending dumbbell weight add-on that adds weight at the dumbbell head while keeping your handle clear.',
+    'Patent-pending dumbbell weight add-on that adds weight at the dumbbell head while keeping your handle clear.',
   );
   setCanonical('/');
 }
@@ -93,6 +108,8 @@ function App() {
         <AboutPage />
       ) : currentPage === 'faq' ? (
         <FAQPage />
+      ) : currentPage === 'terms' ? (
+        <TermsPage />
       ) : (
         <HomePage onImageSelect={setSelectedImage} />
       )}

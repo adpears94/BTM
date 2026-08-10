@@ -1,0 +1,293 @@
+.faq-page {
+  background:
+    radial-gradient(circle at 50% -12rem, rgba(197, 19, 21, 0.16), transparent 28rem),
+    linear-gradient(180deg, #07080a 0%, #0b0d10 42rem, #08090a 100%);
+  color: var(--paper);
+  min-height: 100vh;
+}
+
+.faq-hero {
+  overflow: hidden;
+  padding: clamp(64px, 9vw, 112px) clamp(18px, 6vw, 86px) clamp(36px, 5vw, 56px);
+  position: relative;
+  text-align: center;
+}
+
+.faq-hero::before {
+  background: linear-gradient(90deg, transparent, rgba(197, 19, 21, 0.42), transparent);
+  content: "";
+  height: 1px;
+  left: 50%;
+  max-width: 680px;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 70vw;
+}
+
+.faq-hero .section-heading {
+  margin: 0 auto;
+  max-width: 860px;
+}
+
+.faq-hero .eyebrow {
+  background: rgba(197, 19, 21, 0.1);
+  border: 1px solid rgba(197, 19, 21, 0.34);
+  border-radius: 8px;
+  color: #ffffff;
+  display: inline-flex;
+  margin-bottom: 22px;
+  padding: 0.45rem 0.75rem;
+}
+
+.faq-hero h1 {
+  font-size: clamp(2.35rem, 5.4vw, 5.25rem);
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+  margin: 0 auto 1rem;
+  max-width: 880px;
+  text-wrap: balance;
+}
+
+.faq-intro {
+  color: rgba(246, 247, 248, 0.68);
+  font-size: clamp(1rem, 1.45vw, 1.18rem);
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.faq-hero-actions,
+.faq-hero .hero-actions {
+  justify-content: center;
+  margin-top: 1.8rem;
+}
+
+.faq-basics-section,
+.faq-warranty-section,
+.faq-section {
+  padding-left: clamp(18px, 6vw, 86px);
+  padding-right: clamp(18px, 6vw, 86px);
+}
+
+.faq-basics-section {
+  padding-bottom: clamp(34px, 5vw, 64px);
+}
+
+.faq-section-heading {
+  margin: 0 auto clamp(1.2rem, 2.4vw, 2rem);
+  max-width: 1080px;
+  text-align: left;
+}
+
+.faq-section-heading h2 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+.faq-hero-basics {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0 auto;
+  max-width: 1080px;
+  text-align: left;
+}
+
+.faq-basic-card {
+  background: rgba(255, 255, 255, 0.045);
+  border: 1px solid rgba(217, 222, 228, 0.12);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+  padding: clamp(1.1rem, 2vw, 1.35rem);
+  backdrop-filter: blur(12px);
+}
+
+.faq-basic-card h3,
+.faq-basic-card h2 {
+  color: var(--paper);
+  font-size: 0.98rem;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin-bottom: 0.55rem;
+}
+
+.faq-basic-card p {
+  color: rgba(246, 247, 248, 0.66);
+  font-size: 0.93rem;
+  line-height: 1.62;
+  margin-bottom: 0;
+}
+
+.faq-warranty-section {
+  padding-bottom: clamp(42px, 6vw, 78px);
+}
+
+.faq-warranty-card {
+  background:
+    linear-gradient(135deg, rgba(197, 19, 21, 0.16), rgba(255, 255, 255, 0.04) 32%, rgba(255, 255, 255, 0.035)),
+    rgba(16, 19, 23, 0.9);
+  border: 1px solid rgba(197, 19, 21, 0.36);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+  display: grid;
+  gap: clamp(1.4rem, 3vw, 2.6rem);
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: clamp(1.35rem, 3vw, 2.4rem);
+}
+
+.faq-warranty-card-header h2 {
+  font-size: clamp(1.85rem, 3.3vw, 3.2rem);
+  letter-spacing: -0.045em;
+  line-height: 1;
+  margin-bottom: 0.85rem;
+}
+
+.faq-warranty-card-header p:not(.eyebrow) {
+  color: rgba(246, 247, 248, 0.72);
+  line-height: 1.68;
+  margin-bottom: 0;
+}
+
+.faq-page .faq-section {
+  border-top: 1px solid rgba(217, 222, 228, 0.1);
+  padding-bottom: clamp(56px, 8vw, 108px);
+  padding-top: clamp(42px, 6vw, 72px);
+}
+
+.faq-layout,
+.faq-page .faq-layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.faq-category {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(217, 222, 228, 0.11);
+  border-radius: var(--radius-lg);
+  box-shadow: none;
+  padding: clamp(1.15rem, 2.4vw, 1.6rem);
+  backdrop-filter: blur(12px);
+}
+
+.faq-category h2 {
+  color: var(--paper);
+  font-size: clamp(1.15rem, 1.5vw, 1.35rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0;
+}
+
+.faq-item {
+  border-top: 1px solid rgba(217, 222, 228, 0.1);
+  color: rgba(246, 247, 248, 0.76);
+  padding: 0;
+}
+
+.faq-item:first-child {
+  border-top: 0;
+}
+
+.faq-item summary {
+  align-items: center;
+  color: var(--paper);
+  cursor: pointer;
+  display: flex;
+  font-weight: 800;
+  gap: 1rem;
+  justify-content: space-between;
+  line-height: 1.35;
+  list-style: none;
+  padding: 1rem 0;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  color: var(--red);
+  content: "+";
+  flex: 0 0 auto;
+  font-size: 1.35rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+}
+
+.faq-item p {
+  color: rgba(246, 247, 248, 0.68);
+  line-height: 1.68;
+  margin: 0;
+  max-width: 760px;
+  padding: 0 2.4rem 1rem 0;
+}
+
+.faq-cta {
+  align-items: center;
+  background: linear-gradient(135deg, rgba(246, 247, 248, 0.96), rgba(222, 228, 233, 0.94));
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  padding: clamp(44px, 6vw, 72px) clamp(18px, 6vw, 86px);
+  text-align: center;
+}
+
+.faq-cta h2 {
+  font-size: clamp(1.9rem, 3vw, 3.2rem);
+  letter-spacing: -0.045em;
+  line-height: 1;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
+}
+
+.faq-cta p:not(.eyebrow) {
+  color: #56616d;
+  line-height: 1.65;
+  margin: 0 auto 1.25rem;
+  max-width: 620px;
+}
+
+@media (max-width: 980px) {
+  .faq-hero-basics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .faq-warranty-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .faq-hero {
+    padding-top: 52px;
+  }
+
+  .faq-hero-basics {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-section-heading {
+    text-align: center;
+  }
+
+  .faq-item p {
+    padding-right: 0;
+  }
+}

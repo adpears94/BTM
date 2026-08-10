@@ -1,4 +1,5 @@
-import { faqCategories } from '../content';
+import { faqCategories } from '../../content';
+import './FAQPage.css';
 
 function FAQPage() {
   const productBasics = faqCategories.find(
