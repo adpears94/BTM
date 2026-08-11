@@ -29,12 +29,6 @@
   transform: translateZ(0);
 }
 
-.product-visual {
-  min-width: 0;
-  max-width: none;
-  width: 100%;
-}
-
 .image-placeholder {
   align-items: center;
   aspect-ratio: 4 / 3;
@@ -397,6 +391,7 @@
   order: 1;
   overflow: hidden;
   width: 100vw;
+  align-items: center;
 }
 
 .hero .image-placeholder-large {
@@ -404,6 +399,8 @@
   height: calc(100% / 0.93);
   min-height: 0;
   transform: translateY(-7%);
+  margin-top: 1.5vh;
+  
 }
 
 .hero .image-placeholder {

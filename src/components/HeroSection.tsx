@@ -10,14 +10,14 @@ function HeroSection({ onImageSelect }: HeroSectionProps) {
     <section className="hero" id="top">
       <div
         className="product-visual"
-        aria-label="JellyFish dumbbell weight add-on product image"
+        aria-label="Dumbbell weight add-on product image"
       >
         <div className="image-placeholder image-placeholder-large">
           <button
             className="image-zoom-button"
             type="button"
             onClick={() => onImageSelect(heroImage)}
-            aria-label="Open JellyFish dumbbell weight add-on image full screen"
+            aria-label="Open Dumbbell weight add-on image full screen"
           >
             <img src={heroImage.src} alt={heroImage.alt} />
           </button>

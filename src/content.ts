@@ -5,7 +5,7 @@ import type {
 } from './types';
 
 export const heroImage: ProductImage = {
-  src: '/premium/40s_main.png',
+  src: '/premium/on_off.png',
   alt: 'JellyFish dumbbell weight add-on mounted on a fixed dumbbell head while keeping the handle clear',
 };
 

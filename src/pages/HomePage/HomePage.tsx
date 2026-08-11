@@ -10,7 +10,7 @@ type HomePageProps = {
 
 function HomePage({ onImageSelect }: HomePageProps) {
   return (
-    <main aria-label="JellyFish dumbbell weight add-on product page">
+    <main aria-label="Dumbbell weight add on product page">
       <HeroSection onImageSelect={onImageSelect} />
       <DetailsSection onImageSelect={onImageSelect} />
       <EmailSection />
