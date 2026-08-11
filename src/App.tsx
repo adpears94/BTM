@@ -1,14 +1,30 @@
 import { useCallback, useEffect, useState } from 'react';
 import ImageModal from './components/ImageModal';
 import IntroVideo from './components/IntroVideo';
+import SiteFooter from './components/SiteFooter';
 import SiteHeader from './components/SiteHeader';
 import AboutPage from './pages/AboutPage/AboutPage';
 import FAQPage from './pages/FAQPage/FAQPage';
 import HomePage from './pages/HomePage/HomePage';
 import TermsPage from './pages/TermsPage/TermsPage';
+import PolicyPage from './pages/PolicyPage/PolicyPage';
+import {
+  privacyPolicy,
+  returnPolicy,
+  shippingPolicy,
+  warrantyPolicy,
+} from './policies';
 import type { ProductImage } from './types';
 
-type Page = 'home' | 'faq' | 'about' | 'terms';
+export type Page =
+  | 'home'
+  | 'faq'
+  | 'about'
+  | 'terms'
+  | 'shipping'
+  | 'returns'
+  | 'warranty'
+  | 'privacy';
 
 function getCurrentPage(): Page {
   const normalizedPath = window.location.pathname.replace(/\/$/, '') || '/';
@@ -21,8 +37,27 @@ function getCurrentPage(): Page {
     return 'about';
   }
 
-  if (normalizedPath === '/terms') {
+  if (
+    normalizedPath === '/terms-of-service' ||
+    normalizedPath === '/terms'
+  ) {
     return 'terms';
+  }
+
+  if (normalizedPath === '/shipping-policy') {
+    return 'shipping';
+  }
+
+  if (normalizedPath === '/return-refund-policy') {
+    return 'returns';
+  }
+
+  if (normalizedPath === '/warranty') {
+    return 'warranty';
+  }
+
+  if (normalizedPath === '/privacy-policy') {
+    return 'privacy';
   }
 
   return 'home';
@@ -53,6 +88,21 @@ function setCanonical(path: string) {
 }
 
 function updateSeo(page: Page) {
+  const policySeo = {
+    shipping: ['Shipping Policy', 'Read the Bigger Than Most shipping and delivery policy.', '/shipping-policy'],
+    returns: ['Return / Refund Policy', 'Read the Bigger Than Most returns and refunds policy.', '/return-refund-policy'],
+    warranty: ['Lifetime Warranty', 'Read the Bigger Than Most JellyFish lifetime warranty.', '/warranty'],
+    privacy: ['Privacy Policy', 'Learn how Bigger Than Most collects, uses, and protects information.', '/privacy-policy'],
+  } as const;
+
+  if (page in policySeo) {
+    const [title, description, path] = policySeo[page as keyof typeof policySeo];
+    document.title = `${title} | Bigger Than Most`;
+    setOrCreateMeta('description', description);
+    setCanonical(path);
+    return;
+  }
+
   if (page === 'faq') {
     document.title = 'Dumbbell Weight Add-On FAQ | Bigger Than Most';
     setOrCreateMeta(
@@ -74,12 +124,12 @@ function updateSeo(page: Page) {
   }
 
   if (page === 'terms') {
-    document.title = 'Terms of Use | Bigger Than Most';
+    document.title = 'Terms of Service | Bigger Than Most';
     setOrCreateMeta(
       'description',
       'Read the terms governing use of the Bigger Than Most website, products, content, and services.',
     );
-    setCanonical('/terms');
+    setCanonical('/terms-of-service');
     return;
   }
 
@@ -110,9 +160,19 @@ function App() {
         <FAQPage />
       ) : currentPage === 'terms' ? (
         <TermsPage />
+      ) : currentPage === 'shipping' ? (
+        <PolicyPage policy={shippingPolicy} />
+      ) : currentPage === 'returns' ? (
+        <PolicyPage policy={returnPolicy} />
+      ) : currentPage === 'warranty' ? (
+        <PolicyPage policy={warrantyPolicy} />
+      ) : currentPage === 'privacy' ? (
+        <PolicyPage policy={privacyPolicy} />
       ) : (
         <HomePage onImageSelect={setSelectedImage} />
       )}
+
+      <SiteFooter />
 
       <ImageModal image={selectedImage} onClose={closeModal} />
       <IntroVideo />

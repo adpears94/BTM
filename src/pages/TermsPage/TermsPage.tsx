@@ -6,7 +6,7 @@ function TermsPage() {
       <section className="terms-hero">
         <div className="terms-shell">
           <p className="eyebrow">Bigger Than Most Legal</p>
-          <h1>Terms of Use</h1>
+          <h1>Terms of Service</h1>
           <p className="terms-updated">Effective Date: August 3, 2026</p>
           <p className="terms-intro">
             These Terms of Use govern your access to and use of the Bigger Than
@@ -16,7 +16,7 @@ function TermsPage() {
         </div>
       </section>
 
-      <section className="terms-content" aria-label="Terms of Use content">
+      <section className="terms-content" aria-label="Terms of Service content">
         <div className="terms-shell terms-grid">
           <aside className="terms-sidebar" aria-label="Terms sections">
             <p className="terms-sidebar-title">Sections</p>

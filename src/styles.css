@@ -73,6 +73,73 @@ input {
   min-height: 100vh;
 }
 
+.site-footer {
+  background: #050607;
+  border-top: 1px solid rgba(217, 222, 228, 0.14);
+  padding: clamp(38px, 6vw, 68px) clamp(18px, 4vw, 64px) 24px;
+}
+
+.footer-shell {
+  align-items: start;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: minmax(220px, 1fr) minmax(280px, 1.4fr);
+  margin: 0 auto;
+  max-width: 1320px;
+}
+
+.footer-brand p {
+  color: rgba(246, 247, 248, 0.56);
+  line-height: 1.6;
+  margin: 14px 0 0;
+  max-width: 340px;
+}
+
+.footer-heading {
+  color: var(--red);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px clamp(18px, 2.5vw, 34px);
+}
+
+.footer-links a {
+  color: rgba(246, 247, 248, 0.72);
+  font-size: 0.9rem;
+  font-weight: 750;
+  padding: 4px 0;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffffff;
+}
+
+.footer-links a:focus-visible {
+  outline: 3px solid rgba(197, 19, 21, 0.45);
+  outline-offset: 4px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(217, 222, 228, 0.1);
+  color: rgba(246, 247, 248, 0.4);
+  font-size: 0.78rem;
+  margin: clamp(34px, 5vw, 54px) auto 0;
+  max-width: 1320px;
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
 .intro-overlay {
   align-items: center;
   background: #000000;
@@ -301,6 +368,15 @@ h3 {
 }
 
 @media (max-width: 560px) {
+  .footer-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
   .header-actions {
     width: 100%;
   }

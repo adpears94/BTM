@@ -1,6 +1,6 @@
-type SiteHeaderProps = {
-  page: 'home' | 'faq' | 'about' | 'terms';
-};
+import type { Page } from '../App';
+
+type SiteHeaderProps = { page: Page };
 
 function SiteHeader({ page }: SiteHeaderProps) {
   const founderBatchHref = page === 'home' ? '#email' : '/#email';
