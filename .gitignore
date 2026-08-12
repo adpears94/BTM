@@ -86,3 +86,4 @@ serviceAccountKey.json
 package-lock.json
 /.agents
 /.codex
+/graphify-out
